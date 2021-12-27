@@ -44,7 +44,7 @@ kubectl exec deployment/mongo-client -it -- /bin/bash
 <img src="pictures/6.png"> 
 
 Now we will get access our mongo client.
-After getting access we can gain access to mongo shell via noodeport or directly to mongo shell.
+After getting access we can gain access to mongo shell via noodeport or directly to mongo shell via your localhost.
 Use the following commands:
 ```
 mongo --host mongo-nodeport-svc --port 27017 -u username -p password
