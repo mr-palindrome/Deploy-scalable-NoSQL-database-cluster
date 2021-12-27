@@ -5,15 +5,20 @@ You also need to have kubectl and doctl you can see their documentation on how t
 ### Create a Kubernetes Cluster on DigitalOcean
 
 We need to use  DigitalOcean's control paned to create the cluster
-pic 1
 
+<img src="pictures/1.png"> 
+<br>
 Then choose datacenter region as Bangalore, you can choose anyone. And left everything untouched.
-pic2
+<br>
+<img src="pictures/2.png"> 
+<img src="pictures/3.png"> 
+
 Then press "create". It will take about few minutes to set up.
 After set up write the command below in your terminal or powershell or directly paste it from "Getting started: Connecting to Kubernetes"
 ```
 doctl kubernetes cluster kubeconfig save <kubeconfig>
 ```
+<img src="pictures/4.png"> 
 
 Now we have to apply all the config files.
 But you need to clone my repo of all config files. Use following command to clone it:
@@ -29,13 +34,15 @@ Now  check the services to see is mongodbclient is running or not
 ```
 kubectl get all
 ```
-pic 5
+<img src="pictures/5.png"> 
+
 Now the mongodb cluster is running
 now type:
 ```
 kubectl exec deployment/mongo-client -it -- /bin/bash
 ```
-pic 6
+<img src="pictures/6.png"> 
+
 Now we will get access our mongo client.
 After getting access we can gain access to mongo shell via noodeport or directly to mongo shell.
 Use the following commands:
@@ -46,3 +53,7 @@ or
 ```
 mongo
 ```
+<img src="pictures/7.png"> 
+
+## License
+Apache 
